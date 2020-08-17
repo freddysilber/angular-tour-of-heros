@@ -5,11 +5,11 @@ import { HeroService } from '../hero.service'
 import { MessageService } from '../message.service'
 
 @Component({
-  selector: 'app-heros',
-  templateUrl: './heros.component.html',
-  styleUrls: ['./heros.component.scss']
+  selector: 'app-heroes',
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.scss']
 })
-export class HerosComponent implements OnInit {
+export class HeroesComponent implements OnInit {
   heros: Hero[]
   selectedHero: Hero
 
@@ -23,7 +23,7 @@ export class HerosComponent implements OnInit {
   }
 
   getHeros(): void {
-    this.heroService.getHeros()
+    this.heroService.getHeroes()
       .subscribe(heros => this.heros = heros)
   }
 
